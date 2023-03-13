@@ -13,3 +13,6 @@ Style/Documentation:
 Style/IfUnlessModifier:
   Enabled: false
   
+Metrics/BlockLength:
+  Exclude:
+    - 'config/environments/**/*'
