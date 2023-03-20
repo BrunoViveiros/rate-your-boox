@@ -33,7 +33,7 @@ gem 'cssbundling-rails'
 gem 'jbuilder'
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", "~> 4.0"
+gem 'redis', '~> 4.0'
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -60,6 +60,7 @@ group :development, :test do
   gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails', '~> 6.2'
   gem 'faker', '~> 3.1'
+  gem 'hotwire-livereload', '~> 1.2'
   gem 'letter_opener', '~> 1.8'
   gem 'rspec-rails', '~> 6.0'
   gem 'rubocop', '~> 1.48', require: false
