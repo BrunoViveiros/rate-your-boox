@@ -1,7 +1,12 @@
 /**
  * Basic typography style for copy text
  */
- body {
-  color: $text-color;
+body {
+  color: $dark-text-color;
   font: normal 125% / 1.4 $text-font-stack;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 2rem;
 }

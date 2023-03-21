@@ -9,14 +9,24 @@ $dark-text-color: #1E1E1E !default;
 $background-color: #FFFAF0 !default;
 $light-green: #ABE5BC !default;
 $light-orange: #FFA776 !default;
+$orange: #fd9c68 !default;
 $light-yellow: #FFD787 !default;
 $light-purple: #CFADE8 !default;
 $light-pink: #FFA89A !default;
 
 $max-width: 1180px !default;
 
+$border-radius-sm: 0.375rem;
+$border-radius-md: 0.625rem;
+
+$margin-sm: 0,5rem;
+$margin-md: 1rem;
+$margin-lg: 2rem;
+
 $breakpoints: (
   'small': 320px,
   'medium': 768px,
   'large': 1024px,
   ) !default;
+
+$border-transition: border 0.2s ease-in-out;

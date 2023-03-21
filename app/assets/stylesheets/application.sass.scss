@@ -22,12 +22,14 @@
 //   'layout/footer';
 
 // 5. Components
-// @import
-//   'components/button';
+@import
+  'components/form',
+  'components/button',
+  'components/toast';
 
 // 6. Page-specific styles
-// @import
-//   'pages/home';
+@import
+  'pages/devise/sessions/new';
 
 // 7. Themes
 // @import

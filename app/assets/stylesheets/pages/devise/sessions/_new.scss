@@ -1,0 +1,28 @@
+.auth {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    border-radius: $border-radius-md;
+    padding: 30px;
+    width: 100%;
+    max-width: 500px;
+
+    color: $dark-text-color;
+    background-color: $background-color;
+    box-shadow: 0 3px 15px rgb(51 51 51 / 20%);
+    overflow: hidden;
+  }
+
+  &__header {
+    margin-bottom: $margin-lg;
+  }
+}
