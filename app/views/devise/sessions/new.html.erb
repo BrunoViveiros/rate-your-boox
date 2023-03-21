@@ -1,0 +1,37 @@
+<div class="auth container">
+  <div class="auth-container">
+
+    <h2>Log in</h2>
+
+    <%= form_with(
+                model: resource,
+                scope: resource_name,
+                url: session_path(resource_name),
+                class: 'auth-form') do |f| %>
+      <div class="auth-form__field form-field">
+        <%= fa_icon "camera-retro"%>
+        <%= f.label :email, class: "form-field__label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-field__input" %>
+      </div>
+
+      <div class="auth-form__field form-field">
+        <%= f.label :password, class: "form-field__label" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-field__input" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="auth-form__field form-field">
+          <%= f.check_box :remember_me, class: "form-field__checkbox"  %>
+          <%= f.label :remember_me, class: "form-field__checkbox-label" %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+
+  </div>
+  <%= render "devise/shared/links" %>
+
+</div>
