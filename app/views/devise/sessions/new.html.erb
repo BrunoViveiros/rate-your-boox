@@ -1,33 +1,31 @@
 <div class="auth container">
-  <div class="auth-container">
+  <div class="auth__container">
 
-    <h2>Log in</h2>
-
+    <h2 class="auth__header">Log in</h2>
     <%= form_with(
                 model: resource,
                 scope: resource_name,
                 url: session_path(resource_name),
-                class: 'auth-form') do |f| %>
-      <div class="auth-form__field form-field">
-        <%= fa_icon "camera-retro"%>
-        <%= f.label :email, class: "form-field__label" %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-field__input" %>
+                class: 'form') do |f| %>
+      <div class="form__field">
+        <%= f.label :email, class: "form__label" %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__input" %>
       </div>
 
-      <div class="auth-form__field form-field">
-        <%= f.label :password, class: "form-field__label" %>
-        <%= f.password_field :password, autocomplete: "current-password", class: "form-field__input" %>
+      <div class="form__field">
+        <%= f.label :password, class: "form__label" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form__input" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
-        <div class="auth-form__field form-field">
-          <%= f.check_box :remember_me, class: "form-field__checkbox"  %>
-          <%= f.label :remember_me, class: "form-field__checkbox-label" %>
+        <div class="form__field">
+          <%= f.check_box :remember_me, class: "form__checkbox" %>
+          <%= f.label :remember_me, class: "form__checkbox-label" %>
         </div>
       <% end %>
 
       <div class="actions">
-        <%= f.submit "Log in" %>
+        <%= f.submit "Log in", class: "button" %>
       </div>
     <% end %>
 
