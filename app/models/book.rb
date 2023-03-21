@@ -5,4 +5,5 @@ class Book < ApplicationRecord
   validates :release_date, presence: true
 
   belongs_to :author
+  has_many :comments, as: :commentable, dependent: :destroy
 end
