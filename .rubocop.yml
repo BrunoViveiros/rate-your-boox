@@ -13,6 +13,9 @@ Style/Documentation:
 Style/IfUnlessModifier:
   Enabled: false
   
+Rails/NotNullColumn:
+  Enabled: false
+
 Metrics/BlockLength:
   Exclude:
     - 'config/environments/**/*'
