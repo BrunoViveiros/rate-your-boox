@@ -11,13 +11,7 @@
   </head>
   <body>
     <%= yield %>
-    <p class="notice"><%= notice %></p>
-    <% if alert %>
-      <div class="toast" data-controller="toast">
-        <%= octicon "alert", class: "toast__icon", "aria-label": "alert icon" %>
-        <p class="toast__text"><%= alert %></p>
-        <%= octicon "x", class: "toast__close-icon", "aria-label": "close button", "data-controller": "toast.close" %>
-      </div>
-    <% end %>
+    <%= render "shared/toast", type: {alert: alert} %>
+    <%= render "shared/toast", type: {notice: notice} %>
   </body>
 </html>
