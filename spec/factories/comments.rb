@@ -3,6 +3,7 @@
 FactoryBot.define do
   factory :comment do
     body { Faker::Quote.matz }
+    user
     for_user
 
     trait :for_user do
