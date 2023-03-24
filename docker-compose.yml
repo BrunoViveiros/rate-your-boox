@@ -5,6 +5,8 @@ services:
     image: postgres
     ports:
       - 5432:5432
+    networks:
+      - rate-your-boox
     environment:
       - POSTGRES_PASSWORD=sekret
       - PGDATA=/var/lib/postgresql/data/pgdata
@@ -15,5 +17,10 @@ services:
     image: redis
     ports:
       - 6379:6379
+    networks:
+      - rate-your-boox
     volumes:
       - ./tmp/redis_data:/var/lib/redis/data
+networks:
+  rate-your-boox:
+    name: rate-your-boox_default

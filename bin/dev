@@ -5,4 +5,10 @@ if ! gem list foreman -i --silent; then
   gem install foreman
 fi
 
+NETWORK_NAME=rate-your-boox_default
+if [ -z $(docker network ls --filter name=^${NETWORK_NAME}$ --format="{{ .Name }}") ] ; then 
+     echo "Creating Docker network  < ${NETWORK_NAME} > ..."
+     docker network create ${NETWORK_NAME} ; 
+fi
+
 exec foreman start -f Procfile.dev "$@"
