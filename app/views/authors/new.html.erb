@@ -1,0 +1,22 @@
+<h1>New Author</h1>
+
+<%= form_with model: @author do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :birthday %>
+    <%= form.date_field :birthday, min: Date.today, autocomplete: "birthday" %>
+  </div>
+
+  <div>
+    <%= form.label :also_known_as %>
+    <%= form.text_field :also_known_as, multiple:true %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

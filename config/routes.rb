@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   # devise_for :users
   devise_for :users, path: 'auth'
 
-  resources :users, only: %i[index show], param: :username
-
   root to: 'users#index'
+
+  resources :users, only: %i[index show], param: :username
+  resources :authors
 end
