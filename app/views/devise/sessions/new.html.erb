@@ -2,19 +2,26 @@
   <div class="auth__container">
 
     <h2 class="auth__header">Log in</h2>
+
     <%= form_with(
                 model: resource,
                 scope: resource_name,
                 url: session_path(resource_name),
                 class: 'form') do |f| %>
+
       <div class="form__field">
         <%= f.label :email, class: "form__label" %>
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form__input" %>
+        <%= f.email_field :email,
+                      autofocus: true,
+                      autocomplete: "email",
+                      class: "form__input" %>
       </div>
 
       <div class="form__field">
         <%= f.label :password, class: "form__label" %>
-        <%= f.password_field :password, autocomplete: "current-password", class: "form__input" %>
+        <%= f.password_field :password,
+                         autocomplete: "current-password",
+                         class: "form__input" %>
       </div>
 
       <% if devise_mapping.rememberable? %>
@@ -29,7 +36,7 @@
       </div>
     <% end %>
 
-  </div>
-  <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links" %>
 
+  </div>
 </div>
