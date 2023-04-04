@@ -1,15 +1,25 @@
-    <% if type[:alert] %>
-      <div class="toast toast--alert" data-controller="toast">
-        <%= octicon "alert", class: "toast__icon", "aria-label": "alert icon" %>
-        <p class="toast__text"><%= type[:alert] %></p>
-        <%= octicon "x", class: "toast__close-icon", "aria-label": "close button", "data-controller": "toast.close" %>
-      </div>
-    <% end %>
+<% if type[:alert] %>
 
-    <% if type[:notice] %>
-      <div class="toast toast--notice" data-controller="toast">
-        <%= octicon "shield-check", class: "toast__icon", "aria-label": "shield-check icon" %>
-        <p class="toast__text"><%= type[:notice] %></p>
-        <%= octicon "x", class: "toast__close-icon", "aria-label": "close button", "data-controller": "toast.close" %>
-      </div>
-    <% end %>
+  <div class="toast toast--alert" data-controller="toast">
+    <%= octicon "alert", class: "toast__icon", "aria-label": "alert icon" %>
+    <p class="toast__text"><%= type[:alert] %></p>
+    <%= octicon "x",
+    class: "toast__close-icon",
+    "aria-label": "close button",
+    "data-controller": "toast.close" %>
+  </div>
+
+<% end %>
+
+<% if type[:notice] %>
+
+  <div class="toast toast--notice" data-controller="toast">
+    <%= octicon "shield-check", class: "toast__icon", "aria-label": "shield-check icon" %>
+    <p class="toast__text"><%= type[:notice] %></p>
+    <%= octicon "x",
+    class: "toast__close-icon",
+    "aria-label": "close button",
+    "data-controller": "toast.close" %>
+  </div>
+
+<% end %>
