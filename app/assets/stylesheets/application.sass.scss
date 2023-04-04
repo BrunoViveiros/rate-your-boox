@@ -25,11 +25,12 @@
 @import
   'components/form',
   'components/button',
-  'components/toast';
+  'components/toast',
+  'components/middle';
 
 // 6. Page-specific styles
-@import
-  'pages/devise/sessions/new';
+// @import
+//   'pages/devise/sessions/new';
 
 // 7. Themes
 // @import
